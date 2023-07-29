@@ -1,0 +1,21 @@
+name: test
+
+on:
+  push:
+  pull_request:
+    types: [opened, reopened, review_requested, synchronize]
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Compile and run programs
+        run: |
+          cd 01_Greetings
+          make
