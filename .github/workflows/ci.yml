@@ -21,3 +21,5 @@ jobs:
           make
           cd ../02_GreetingsWorld
           make
+          make clean
+          make jar
