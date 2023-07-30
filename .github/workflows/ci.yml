@@ -19,3 +19,5 @@ jobs:
         run: |
           cd 01_Greetings
           make
+          cd ../02_GreetingsWorld
+          make
